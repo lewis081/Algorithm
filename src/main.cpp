@@ -10,8 +10,8 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    QVector<int > arrays{13, 1, 10, 9, 4, 12, 100, 0, 17};
-    insertSort(arrays);
+    QVector<int > arrays{100, 17, 13, 12, 10, 9, 4, 1, 0};
+    insertSort_BinarySerach(arrays);
     qDebug()<< arrays;
 
     return a.exec();

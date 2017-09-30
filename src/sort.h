@@ -3,14 +3,15 @@
 
 #include <vector>
 #include <QVector>
+#include <QList>
 
 namespace NAMESPACE {
 
 void insertSort(int* array, const int size);
-
-void insertSort(std::vector<int >& array);
-
 void insertSort(QVector<int >& array);
+void insertSort(QList<int >& array);
+
+void insertSort_BinarySerach(QVector<int >& array);
 
 }
 
