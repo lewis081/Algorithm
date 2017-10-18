@@ -1,5 +1,5 @@
 #include "sort.h"
-
+#include <QDebug>
 
 namespace NAMESPACE {
 
@@ -62,7 +62,6 @@ void insertSort(QList<int> &array)
 //大于val的最小值的idx
 int findIdxUseBinarySearch(QVector<int> &array, int left, int right, const int val)
 {
-
     while(1){
         const int mid  = (left + right) / 2;
 
@@ -118,6 +117,7 @@ int findIdxUseBinarySearch_MyIdea(QVector<int> &array, int left, int right, cons
     //judge: 根据二分法最终索引的特点 多加一层判定
     int idx = left;
     if (array[left]  < key) idx = left + 1;
+//    qDebug()<< key<< array[left + 1];
 
     return idx;
 }
