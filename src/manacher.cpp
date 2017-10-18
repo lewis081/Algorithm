@@ -92,7 +92,10 @@ QString proProcess(const QString& str)
 QString manacher(const QString& str){
     QString input = preProcess(str);
 
+    QElapsedTimer timer;
+    timer.start();
     ManacherBackInfo info = manacher_core(input);
+    qDebug()<< "manacher_core:"<< timer.elapsed()<< "ms";
 
     const int sIdx = info.maxLenCenterIdx - (info.maxLenRadius-1);
     const int len  = 2*info.maxLenRadius - 1;

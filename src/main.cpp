@@ -16,15 +16,16 @@ int main(int argc, char *argv[])
 //    qDebug()<< arrays;
 
     QString str;
-    const int N = 900000;
+    const int N = 1000000;
     for(int i = 0; i < N; i++){
-        str.append("xx1csadasdsadasc1x1");
+        str.append("xx1csadasdsadasc1xx");
     }
 
     qDebug()<< "init done";
     QElapsedTimer timer;
     timer.start();
-    manacher(str);
+    QString sss =manacher(str);
+    qDebug()<< sss.size();
     qDebug()<< N<< "manacher done:"<< timer.elapsed()<< "ms";
 
     return a.exec();
